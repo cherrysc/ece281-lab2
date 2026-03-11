@@ -56,22 +56,53 @@ begin
 
     process
     begin
-        w_Hex <= x"0"; wait for 20 ns;
-        w_Hex <= x"1"; wait for 20 ns;
-        w_Hex <= x"2"; wait for 20 ns;
-        w_Hex <= x"3"; wait for 20 ns;
-        w_Hex <= x"4"; wait for 20 ns;
-        w_Hex <= x"5"; wait for 20 ns;
-        w_Hex <= x"6"; wait for 20 ns;
-        w_Hex <= x"7"; wait for 20 ns;
-        w_Hex <= x"8"; wait for 20 ns;
-        w_Hex <= x"9"; wait for 20 ns;
-        w_Hex <= x"A"; wait for 20 ns;
-        w_Hex <= x"B"; wait for 20 ns;
-        w_Hex <= x"C"; wait for 20 ns;
-        w_Hex <= x"D"; wait for 20 ns;
-        w_Hex <= x"E"; wait for 20 ns;
-        w_Hex <= x"F"; wait for 20 ns;
+        w_Hex <= x"0"; wait for 10 ns;
+            assert w_seg = "1000000" report "HEX 0 FAILED" severity error;
+        
+        w_Hex <= x"1"; wait for 10 ns;
+            assert w_seg = "1111001" report "HEX 1 FAILED" severity error;
+        
+        w_Hex <= x"2"; wait for 10 ns;
+            assert w_seg = "0100100" report "HEX 2 FAILED" severity error;
+        
+        w_Hex <= x"3"; wait for 10 ns;
+            assert w_seg = "0110000" report "HEX 3 FAILED" severity error;
+        
+        w_Hex <= x"4"; wait for 10 ns;
+            assert w_seg = "0011001" report "HEX 4 FAILED" severity error;
+        
+        w_Hex <= x"5"; wait for 10 ns;
+            assert w_seg = "0010010" report "HEX 5 FAILED" severity error;
+        
+        w_Hex <= x"6"; wait for 10 ns;
+            assert w_seg = "0000010" report "HEX 6 FAILED" severity error;
+        
+        w_Hex <= x"7"; wait for 10 ns;
+            assert w_seg = "1111000" report "HEX 7 FAILED" severity error;
+        
+        w_Hex <= x"8"; wait for 10 ns;
+            assert w_seg = "0000000" report "HEX 8 FAILED" severity error;
+        
+        w_Hex <= x"9"; wait for 10 ns;
+            assert w_seg = "0010000" report "HEX 9 FAILED" severity error;
+        
+        w_Hex <= x"A"; wait for 10 ns;
+            assert w_seg = "0001000" report "HEX A FAILED" severity error;
+        
+        w_Hex <= x"B"; wait for 10 ns;
+            assert w_seg = "0000011" report "HEX B FAILED" severity error;
+        
+        w_Hex <= x"C"; wait for 10 ns;
+            assert w_seg = "1000110" report "HEX C FAILED" severity error;
+        
+        w_Hex <= x"D"; wait for 10 ns;
+            assert w_seg = "0100001" report "HEX D FAILED" severity error;
+        
+        w_Hex <= x"E"; wait for 10 ns;
+            assert w_seg = "0000110" report "HEX E FAILED" severity error;
+        
+        w_Hex <= x"F"; wait for 10 ns;
+            assert w_seg = "0001110" report "HEX F FAILED" severity error;
         wait;
     end process;
     
