@@ -36,8 +36,8 @@ end sevenseg_decoder_tb;
 
 architecture Behavioral of sevenseg_decoder_tb is
 
-    signal i_Hex   : STD_LOGIC_VECTOR(3 downto 0);
-    signal o_seg_n : STD_LOGIC_VECTOR(6 downto 0);
+    signal w_Hex   : STD_LOGIC_VECTOR(3 downto 0);
+    signal w_seg : STD_LOGIC_VECTOR(6 downto 0);
 
     component sevenseg_decoder
         Port (
@@ -50,28 +50,28 @@ begin
 
     uut: sevenseg_decoder
         port map (
-            i_hex   => i_Hex,
-            o_seg_n => o_seg_n
+            i_hex   => w_Hex,
+            o_seg_n => w_seg
         );
 
     process
     begin
-        i_Hex <= x"0"; wait for 20 ns;
-        i_Hex <= x"1"; wait for 20 ns;
-        i_Hex <= x"2"; wait for 20 ns;
-        i_Hex <= x"3"; wait for 20 ns;
-        i_Hex <= x"4"; wait for 20 ns;
-        i_Hex <= x"5"; wait for 20 ns;
-        i_Hex <= x"6"; wait for 20 ns;
-        i_Hex <= x"7"; wait for 20 ns;
-        i_Hex <= x"8"; wait for 20 ns;
-        i_Hex <= x"9"; wait for 20 ns;
-        i_Hex <= x"A"; wait for 20 ns;
-        i_Hex <= x"B"; wait for 20 ns;
-        i_Hex <= x"C"; wait for 20 ns;
-        i_Hex <= x"D"; wait for 20 ns;
-        i_Hex <= x"E"; wait for 20 ns;
-        i_Hex <= x"F"; wait for 20 ns;
+        w_Hex <= x"0"; wait for 20 ns;
+        w_Hex <= x"1"; wait for 20 ns;
+        w_Hex <= x"2"; wait for 20 ns;
+        w_Hex <= x"3"; wait for 20 ns;
+        w_Hex <= x"4"; wait for 20 ns;
+        w_Hex <= x"5"; wait for 20 ns;
+        w_Hex <= x"6"; wait for 20 ns;
+        w_Hex <= x"7"; wait for 20 ns;
+        w_Hex <= x"8"; wait for 20 ns;
+        w_Hex <= x"9"; wait for 20 ns;
+        w_Hex <= x"A"; wait for 20 ns;
+        w_Hex <= x"B"; wait for 20 ns;
+        w_Hex <= x"C"; wait for 20 ns;
+        w_Hex <= x"D"; wait for 20 ns;
+        w_Hex <= x"E"; wait for 20 ns;
+        w_Hex <= x"F"; wait for 20 ns;
         wait;
     end process;
     
